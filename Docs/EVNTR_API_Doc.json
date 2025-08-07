@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "7d7bf37f-85b4-4eed-8b3b-6b4ba31243b3",
+		"name": "TAM-2023",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registo utilizador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"username0015\",\n    \"password\": \"senha12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/register",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login utilizador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"username004\",\n    \"password\": \"senha12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/login",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registar match",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"tournament\": \"Virtua Tennis 21----\",\n        \"date_match\": \"13-12-1992 22:40:11\",\n        \"player1\": \"Tommy Haas D----\",\n        \"player2\": \"Yevgeny Kafelnikov F----\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/matchs",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"matchs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get matchs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/matchs",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"matchs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get match by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/match/12?seq_id=1",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"match",
+						"12"
+					],
+					"query": [
+						{
+							"key": "seq_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get score by match_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/match/14/score?seq_id=1",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"match",
+						"14",
+						"score"
+					],
+					"query": [
+						{
+							"key": "seq_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete match by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/match/20",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"match",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update score by match_id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"score\":  [\n\n                    [\"6\",\"1\",\"6\",\"40\"],\n\n                    [\"3\",\"6\",\"3\",\"30\"]\n\n                ]\n                ,\n        \"winner\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/match/12/score",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"match",
+						"12",
+						"score"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update match by match_id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"tournament\": \"World Cup2-edited2212\",\n        \"player1\": \"Jim Courier2-edited2212\",\n        \"player2\": \"Cédric Pioline2-edited2212\",\n        \"date_match\": \"13-12-2020 22:40:11\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/match/21",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"match",
+						"21"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzIzOTc3Nzd9.6kk3d_YGPNsJETyahnGnjvHaIgM3aOi5iojA6tEv2_8",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "https://tam-api-teste.vercel.app/",
+			"type": "default"
+		},
+		{
+			"key": "server",
+			"value": "http://127.0.0.1:5000",
+			"type": "default",
+			"disabled": true
+		}
+	]
+}

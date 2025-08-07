@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TP03_2425_GabrielLopes</string>
+    <string name="add_event">Adicionar Evento</string>
+    <string name="event_type_image">Imagem do Tipo de Evento</string>
+    <string name="event_free_image">Imagem de Evento Gratuito</string>
+    <string name="event_booked_image">Imagem de inscrição no Evento</string>
+    <string name="location">Location icon</string>
+    <string name="date_icon">Date icon</string>
+    <string name="time_icon">Time icon</string>
+    <string-array name="event_types">
+        <item>Qualquer</item>
+        <item>Cultural</item>
+        <item>Académico</item>
+        <item>Profissional</item>
+        <item>Gastronómico</item>
+        <item>Desportivo</item>
+    </string-array>
+
+</resources>
